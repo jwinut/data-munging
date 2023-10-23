@@ -1,19 +1,18 @@
 import org.junit.jupiter.api.Test;
-import org.w3c.dom.html.HTMLElement;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WeatherFileReaderTest {
     WeatherFileReader fileReader;
     String[] lines;
-    private void setup(){
+
+    private void setup() {
         fileReader = new WeatherFileReader();
         fileReader.read();
         lines = fileReader.getLines();
     }
 
     @Test
-    public void testReadWeatherFile(){
+    public void testReadWeatherFile() {
         setup();
         assertEquals("  Dy MxT   MnT   AvT   HDDay  AvDP 1HrP TPcpn WxType PDir AvSp Dir MxS SkyC MxR MnR AvSLP", lines[0]);
         assertEquals(33, lines.length);
@@ -21,7 +20,7 @@ public class WeatherFileReaderTest {
     }
 
     @Test
-    public void testGetPDirDataFromWeatherData(){
+    public void testGetPDirDataFromWeatherData() {
         setup();
         WeatherData weatherData = new WeatherData(lines);
         assertEquals("280", weatherData.getPDir("1"));
@@ -29,7 +28,7 @@ public class WeatherFileReaderTest {
     }
 
     @Test
-    public void testGetAllDyNumberFromWeatherData(){
+    public void testGetAllDyNumberFromWeatherData() {
         setup();
         WeatherData weatherData = new WeatherData(lines);
         assertEquals(33, weatherData.getAllDy().size());
