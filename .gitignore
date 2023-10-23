@@ -1,4 +1,5 @@
-.gradle
+*.iml
+**/.gradle
 **/build/
 !src/**/build/
 

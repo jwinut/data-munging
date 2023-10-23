@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/04-data-munging.iml" filepath="$PROJECT_DIR$/.idea/04-data-munging.iml" />
+      <module fileurl="file://$PROJECT_DIR$/partone.iml" filepath="$PROJECT_DIR$/partone.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/partone.main.iml" filepath="$PROJECT_DIR$/.idea/modules/partone.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/partone.test.iml" filepath="$PROJECT_DIR$/.idea/modules/partone.test.iml" />
+    </modules>
+  </component>
+</project>
