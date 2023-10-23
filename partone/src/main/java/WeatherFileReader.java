@@ -1,9 +1,18 @@
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
 
 public class WeatherFileReader {
-    public String output() {
+    String[] lines;
+    public void read() {
+        try {
+            this.lines = Files.readAllLines(new File("/Users/nut/codekata/04-data-munging/weather.dat").toPath()).toArray(new String[0]);
+        } catch (IOException e) {
+            lines[0] = "File not found";
+        }
+    }
 
-        return "Dy";
+    public String[] getLines() {
+        return lines;
     }
 }
