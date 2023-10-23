@@ -28,13 +28,13 @@ public class WeatherData {
 
     public int getMxT(int dy) {
         int dyRowIndex = 1 + dy;
-        String maxTemp = lines[dyRowIndex].substring(5, 9).trim();
+        String maxTemp = lines[dyRowIndex].substring(5, 9).trim().replace("*", "");
         return Integer.parseInt(maxTemp);
     }
 
     public int getMnT(int dy) {
         int dyRowIndex = 1 + dy;
-        String minTemp = lines[dyRowIndex].substring(11, 15).trim();
+        String minTemp = lines[dyRowIndex].substring(11, 15).trim().replace("*", "");
         return Integer.parseInt(minTemp);
     }
 }

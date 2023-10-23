@@ -13,6 +13,13 @@ public class WeatherDataCalculatorTest {
     }
 
     @Test
+    public void testDy1TempSpreadFromSpreadList(){
+        WeatherDataCalculator weatherDataCalculator = new WeatherDataCalculator();
+        assertEquals(29, weatherDataCalculator.getSpreadFromList(1));
+        assertEquals( 20, weatherDataCalculator.getSpreadFromList(10));
+    }
+
+    @Test
     public void testGetMxTFromDy(){
         WeatherFileReader fileReader = new WeatherFileReader();
         fileReader.read();
@@ -38,4 +45,5 @@ public class WeatherDataCalculatorTest {
         ArrayList<Integer> spreadList = calculator.getSpreadList();
         assertEquals(30, spreadList.size());
     }
+
 }
