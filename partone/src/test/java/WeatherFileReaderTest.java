@@ -24,6 +24,7 @@ public class WeatherFileReaderTest {
         setup();
         String[] lines = fileReader.getLines();
         WeatherData weatherData = new WeatherData(lines);
-        assertEquals(280, weatherData.getPDir(1));
+        assertEquals("280", weatherData.getPDir("1"));
+        assertEquals("110", weatherData.getPDir("4"));
     }
 }
