@@ -25,4 +25,16 @@ public class WeatherData {
         }
         return allDy;
     }
+
+    public int getMxT(int dy) {
+        int dyRowIndex = 1 + dy;
+        String maxTemp = lines[dyRowIndex].substring(5, 9).trim();
+        return Integer.parseInt(maxTemp);
+    }
+
+    public int getMnT(int dy) {
+        int dyRowIndex = 1 + dy;
+        String minTemp = lines[dyRowIndex].substring(11, 15).trim();
+        return Integer.parseInt(minTemp);
+    }
 }
