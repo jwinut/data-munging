@@ -9,10 +9,25 @@ public class WeatherDataCalculator {
         weatherData = new WeatherData(readWeatherDataFile());
     }
 
+
+
     private String[] readWeatherDataFile(){
         WeatherFileReader fileReader = new WeatherFileReader();
         fileReader.read();
         return fileReader.getLines();
+    }
+
+    public static void main (String[] args){
+        WeatherDataCalculator calculator = new WeatherDataCalculator();
+        System.out.println(calculator.getSmallestTempSpread());
+    }
+
+    public int getSmallestTempSpread(){
+        int smallestTemp = 9999999;
+        for (int temp : getSpreadList()){
+            if(temp < smallestTemp) smallestTemp = temp;
+        }
+        return smallestTemp;
     }
 
     public int calTempSpreadDy(int dy) {

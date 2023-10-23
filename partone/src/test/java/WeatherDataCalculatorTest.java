@@ -6,14 +6,14 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class WeatherDataCalculatorTest {
     @Test
-    public void testDy1TempSpread(){
+    public void testDy1AndDy10TempSpread(){
         WeatherDataCalculator weatherDataCalculator = new WeatherDataCalculator();
         assertEquals(29, weatherDataCalculator.calTempSpreadDy(1));
         assertEquals( 20, weatherDataCalculator.calTempSpreadDy(10));
     }
 
     @Test
-    public void testDy1TempSpreadFromSpreadList(){
+    public void testDy1AndDy10TempSpreadFromSpreadList(){
         WeatherDataCalculator weatherDataCalculator = new WeatherDataCalculator();
         assertEquals(29, weatherDataCalculator.getSpreadFromList(1));
         assertEquals( 20, weatherDataCalculator.getSpreadFromList(10));
